@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Meals from './Components/Meals';
 import RestaurantContainer from './Containers/RestaurantContainer';
+import MealContainer from './Containers/MealContainer';
 
 function App() {
   return (
     <div className="App">
-    <RestaurantContainer />
-    <Meals />
+      <RestaurantContainer />
+      <MealContainer />
     </div>
   );
 }
