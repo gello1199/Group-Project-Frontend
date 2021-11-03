@@ -1,7 +1,7 @@
 function Meals(props) {
-    return(
+    return (
         <div>
-        <h1>List of Meals</h1>
+            <h1>List of Meals</h1>
             <ul>
                 <li>{props.name}</li>
                 <li>{props.price}</li>

@@ -8,19 +8,21 @@ class RestaurantContainer extends React.Component {
     }
     componentDidMount() {
         fetch('http://localhost:3000/restaurants')
-        .then(resp => resp.json())
-        .then(data => {debugger})
+            .then(resp => resp.json())
+            .then(data => {
+                return this.setState({ restaurants: data.data })
+            })
     }
 
     makeRestaurantCard() {
-        return this.state.restaurants.map(r => <Restaurants name={r.name} address={r.address} website={r.website} image={r.image} phone_number={r.phone_number} />)
-        
+        return this.state.restaurants.map(r => <Restaurants {...r.attributes} />)
+
     }
 
     render() {
-        return(
+        return (
             <div>
-            {this.makeRestaurantCard()}
+                {this.makeRestaurantCard()}
             </div>
         )
     }
